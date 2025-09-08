@@ -1,2 +1,3 @@
 # Currency-Convertor-
-Mainly Js - Async API fetch
+Mainly Js - Async API fetch 
+inspiration from yt

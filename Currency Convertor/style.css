@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+:root {
+    --primary-color: #ff9800; /* orange */
+    --primary-transparent: #ff98001a;
+
+    --orange-transparent: #ff980050;
+    --yellow-transparent: #ffc10750;
+
+    --dark-gray: #1a1f29;
+    --dark-gray-light: #232a34;
+}
+
+::selection {
+    background: var(--primary-color);
+    color: var(--dark-gray-light);
+}
+
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+/* background with subtle gradient */
+body {
+    background: linear-gradient(145deg, var(--dark-gray), var(--dark-gray-light));
+    width: 100%;
+    height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+/* blurred glowing circles */
+.circle {
+    width: 350px;
+    height: 350px;
+    border-radius: 100%;
+    filter: blur(150px);
+    position: absolute;
+    z-index: 0;
+}
+
+.circle--purple {
+    background-color: var(--orange-transparent);
+    right: 55%;
+    bottom: 50%;
+}
+
+.circle--blue {
+    background-color: var(--yellow-transparent);
+    left: 55%;
+    top: 50%;
+}
+
+/* main card with glass effect */
+.currency-convertor {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 32px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    z-index: 1;
+    max-width: 420px;
+    width: 90%;
+}
+
+/* title */
+.title {
+    margin-bottom: 36px;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    text-shadow: 0 0 12px rgba(255, 152, 0, 0.6);
+}
+
+/* input box */
+.input {
+    width: 100%;
+    padding-inline: 16px;
+    padding-block: 10px;
+    background: rgba(255, 255, 255, 0.07);
+    border: none;
+    border-radius: 12px;
+    font-size: 18px;
+    text-align: center;
+    outline: 2px solid transparent;
+    transition: 200ms ease;
+    margin-bottom: 32px;
+}
+
+.input:focus {
+    outline: 2px solid var(--primary-color);
+    background: rgba(255, 255, 255, 0.12);
+}
+
+/* select group layout */
+.select_group {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+/* select box */
+.select {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.select img {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    object-fit: cover;
+    border: 2px solid var(--primary-color);
+}
+
+.select select {
+    background: none;
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+    width: 75px;
+    outline: none;
+    cursor: pointer;
+    color: #fff;
+}
+
+.select select option {
+    background: var(--dark-gray);
+    font-size: 16px;
+    color: #fff;
+}
+
+.select select::-webkit-scrollbar {
+    background: var(--dark-gray-light);
+}
+
+.select select::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 4px;
+}
+
+/* swap button */
+.swap-btn {
+    background: var(--primary-color);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 150ms ease;
+    box-shadow: 0 0 10px rgba(255, 152, 0, 0.6);
+}
+
+.swap-btn:active {
+    transform: scale(0.9);
+}
+
+.swap-btn i {
+    color: var(--dark-gray);
+    font-size: 20px;
+}
+
+/* exchange rate text */
+.exchange-rate {
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding-block: 12px;
+    text-align: center;
+    margin-top: 28px;
+    border-radius: 12px;
+    font-weight: 500;
+    transition: 300ms ease;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.exchange-rate:hover {
+    background: rgba(255, 255, 255, 0.12);
+}
+
+/* convert button */
+.convert-btn {
+    width: 100%;
+    margin-top: 24px;
+    padding-block: 10px;
+    background: var(--primary-color);
+    color: var(--dark-gray);
+    font-weight: 600;
+    border-radius: 99px;
+    border: none;
+    cursor: pointer;
+    transition: 200ms ease;
+    font-size: 1.1rem;
+    box-shadow: 0 0 15px rgba(255, 152, 0, 0.6);
+}
+
+.convert-btn:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 20px rgba(255, 152, 0, 0.9);
+}
+
+.convert-btn:active {
+    transform: scale(0.97);
+}

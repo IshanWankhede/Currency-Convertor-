@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <div class="circle circle--purple"></div>
+    <div class="circle circle--blue"></div>
+
+    <main class="currency-convertor">
+        <!-- title of the application -->
+        <h1 class="title">Currency Converter</h1>
+
+        <input class="input" type="number" placeholder="0" id="inputSource">
+        
+        <!-- wrraper for surrency input files -->
+        <div class="select_group">
+
+            <section class="select">
+                <img id="imageSource" src="https://flagcdn.com/w640/us.png">
+                <select id="selectSource"></select>
+            </section>
+
+            <button id="buttonSwap" class="swap-btn">
+                <i class="fa-solid fa-arrow-right-arrow-left"></i>
+            </button>
+
+            <section class="select">
+                <img id="imageTarget" src="https://flagcdn.com/w640/in.png">
+                <select id="selectTarget"></select>
+            </section>
+
+        </div>
+
+         <div class="exchange-rate">
+            <span id="exchangeRateText" class="exchange-rate-text">
+                0 USD = 0 INR
+            </span>
+         </div>
+         <!-- button to perform conversion -->
+         <button id="buttonConvert" class="convert-btn">
+            Convert
+         </button>
+    </main>
+    <audio src="click.mp3" id="click-sound" preload="auto"></audio>
+    <audio src="swap.mp3" id="swap-sound" preload="auto"></audio>
+    <script src="script.js" type="module"></script>
+</body>
+
+</html>
